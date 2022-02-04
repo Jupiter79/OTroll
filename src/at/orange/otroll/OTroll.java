@@ -8,7 +8,6 @@ import at.orange.otroll.listeners.InventoryClose;
 import at.orange.otroll.listeners.AutoCloseInventory;
 import at.orange.otroll.other.AutoTabCompletion;
 import at.orange.otroll.other.TrollInventoryItem;
-import at.orange.otroll.other.updater.MessageOps;
 import at.orange.otroll.other.updater.UpdateChecker;
 import net.minecraft.network.protocol.game.PacketPlayOutGameStateChange.a;
 import net.minecraft.network.protocol.game.PacketPlayOutGameStateChange;
@@ -57,7 +56,7 @@ public class OTroll extends JavaPlugin {
 
         setTrollItems();
 
-        Arrays.asList(new InventoryClick(), new InventoryClose(), new AutoCloseInventory(), new MessageOps(), new Vanish()).forEach(x -> {
+        Arrays.asList(new InventoryClick(), new InventoryClose(), new AutoCloseInventory(), new Vanish()).forEach(x -> {
             getServer().getPluginManager().registerEvents(x, this);
         });
 
