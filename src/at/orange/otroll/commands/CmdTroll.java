@@ -56,7 +56,7 @@ public class CmdTroll implements CommandExecutor {
                             } else p.sendMessage(OTroll.prefix + " §cYou cannot troll this player!");
                         } else p.sendMessage(OTroll.prefix + " §cYou cannot troll yourself, why would you? xD");
                     } else p.sendMessage(OTroll.prefix + " §cThe player §6" + strings[0] + " §cis not online!");
-                } else p.sendMessage(OTroll.prefix + " §cYou need to define a §6player§c or §6#random§c!");
+                } else p.sendMessage(OTroll.prefix + " §cYou need to define a §6player§c, §6#vanish §cor §6#random§c!");
             } else p.sendMessage(OTroll.prefix + " §4You need the permission §aotroll.troll§4!");
         } else Bukkit.getConsoleSender().sendMessage(OTroll.prefix + " Ay bro you're not real go login with an account on the server than you will get a wonderful and pretty GUI");
         return false;
