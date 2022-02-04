@@ -1,7 +1,7 @@
 name: OTroll
 author: Jupiter_79#9440
 main: at.orange.otroll.OTroll
-version: 1.6.9
+version: 1.7
 api-version: 1.18
 
 commands:
