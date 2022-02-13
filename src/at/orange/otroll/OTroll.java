@@ -1,11 +1,8 @@
 package at.orange.otroll;
 
-import at.orange.otroll.listeners.Vanish;
+import at.orange.otroll.listeners.*;
 import at.orange.otroll.other.bstats.Metrics;
 import at.orange.otroll.commands.CmdTroll;
-import at.orange.otroll.listeners.InventoryClick;
-import at.orange.otroll.listeners.InventoryClose;
-import at.orange.otroll.listeners.AutoCloseInventory;
 import at.orange.otroll.other.AutoTabCompletion;
 import at.orange.otroll.other.TrollInventoryItem;
 import at.orange.otroll.other.updater.UpdateChecker;
@@ -56,7 +53,7 @@ public class OTroll extends JavaPlugin {
 
         setTrollItems();
 
-        Arrays.asList(new InventoryClick(), new InventoryClose(), new AutoCloseInventory(), new Vanish()).forEach(x -> {
+        Arrays.asList(new InventoryClick(), new InventoryClose(), new AutoCloseInventory(), new Vanish(), new DisableJLMessage()).forEach(x -> {
             getServer().getPluginManager().registerEvents(x, this);
         });
 
