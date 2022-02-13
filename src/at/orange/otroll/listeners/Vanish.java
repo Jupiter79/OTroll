@@ -28,4 +28,8 @@ public class Vanish implements Listener {
             if (OTroll.vanishedPlayers.contains(p.getUniqueId())) e.setCancelled(true);
         }
     }
+
+    public static boolean isVanished(Player p) {
+        return OTroll.vanishedPlayers.contains(p.getUniqueId());
+    }
 }
