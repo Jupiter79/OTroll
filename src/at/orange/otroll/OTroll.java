@@ -10,7 +10,7 @@ import net.minecraft.network.protocol.game.PacketPlayOutGameStateChange.a;
 import net.minecraft.network.protocol.game.PacketPlayOutGameStateChange;
 import org.bukkit.*;
 import org.bukkit.command.PluginCommand;
-import org.bukkit.craftbukkit.v1_18_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_19_R1.entity.CraftPlayer;
 import org.bukkit.entity.*;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
