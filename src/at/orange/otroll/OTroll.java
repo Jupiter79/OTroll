@@ -10,7 +10,7 @@ import net.minecraft.network.protocol.game.PacketPlayOutGameStateChange.a;
 import net.minecraft.network.protocol.game.PacketPlayOutGameStateChange;
 import org.bukkit.*;
 import org.bukkit.command.PluginCommand;
-import org.bukkit.craftbukkit.v1_19_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_20_R1.entity.CraftPlayer;
 import org.bukkit.entity.*;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
@@ -117,7 +117,7 @@ public class OTroll extends JavaPlugin {
             Player target = t.target;
 
             PacketPlayOutGameStateChange packet = new PacketPlayOutGameStateChange(new a(5), 0);
-            ((CraftPlayer) target).getHandle().b.a(packet);
+            ((CraftPlayer) target).getHandle().c.a(packet);
         }, "§7Displays the minecraft demo screen", true);
         new TrollInventoryItem("§dLook Random", Material.MAGENTA_GLAZED_TERRACOTTA, (t) -> {
             Player target = t.target;
@@ -183,7 +183,7 @@ public class OTroll extends JavaPlugin {
             for (int i = 0; i < 50; i++) {
                 target.playSound(target.getLocation(), Sound.ENTITY_WITHER_SPAWN, SoundCategory.MASTER, 1, 1);
             }
-        }, "§7Lets the player think, 50 withers would have been spawned", true);
+        }, "§7Lets the player think, 50 withers would have been spawned (§4Earrape§7)", true);
         new TrollInventoryItem("§4ALL effects", Material.POTION, (t) -> {
             Player target = t.target;
 
@@ -194,7 +194,7 @@ public class OTroll extends JavaPlugin {
         new TrollInventoryItem("§4Fake BAN", Material.NETHERITE_SWORD, (t) -> {
             Player target = t.target;
 
-            target.kickPlayer("You are banned from this server!\nReason: Banned by an operator.");
+            target.kickPlayer("You are banned from this server");
         }, "§7Lets the player think, he would have been banned", true);
         new TrollInventoryItem("§2AntiCheat fake", Material.REDSTONE_TORCH, (t) -> {
             Player target = t.target;
@@ -261,7 +261,7 @@ public class OTroll extends JavaPlugin {
             Player target = t.target;
 
             Location loc = target.getLocation();
-            loc.setY(-2);
+            loc.setY(-64);
 
             target.teleport(loc);
         }, "§7Teleports the player below bedrock\n§cWARNING: Death WILL occur", true);
