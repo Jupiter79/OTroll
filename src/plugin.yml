@@ -1,8 +1,8 @@
 name: OTroll
-author: Jupiter_79#9440
+author: Jupiter_79
 main: at.orange.otroll.OTroll
 version: 1.7.1
-api-version: 1.19
+api-version: 1.20
 
 commands:
   troll:
